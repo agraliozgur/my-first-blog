@@ -4,12 +4,18 @@
     </head>
     <body>
         <div>
-            <h1><a href="/">Özgürün Blog'una Hoşgeldiniz :)  Blog</a></h1>
+            <h1><a href="/"> Özgürün Blog'una Hoşgeldiniz :) </a></h1>
         </div>
 
         {% for post in posts %}
-            {{ post }}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
         {% endfor %}
+
+        <footer style="grid-row-end: all;color: black;margin-left: 200px;font-size: 50px;">Sevgili Kazım Çelik ve Salih Yavuzer Selamlar!...</footer>
 
     </body>
 </html>
